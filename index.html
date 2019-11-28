@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+  <script type="text/javascript" src="addstock.js"></script>
+
+
+</head>
+
+
+
+<body>
+
+  <form>
+    <div>
+      <label>Name</label>
+      <input type="text" id='name'>
+    </div>
+    <div>
+      <label>Value</label>
+      <input type="text" id='value'>
+    </div>
+    <div>
+      <label>Dividend</label>
+      <input type="text" id='dividend'>
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script type="text/javascript">
+
+
+    name = document.getElementById('name');
+    value = document.getElementById('value');
+    dividend = document.getElementById('dividend');
+
+    alert(dividend);
+
+
+    function Stock(name, value, dividend) {
+      this.name = name;
+      this.value = value;
+      this.dividend = dividend;
+
+      return this;
+    }
+
+
+    var stock1 = new Stock('ADM', 1000, 2);
+
+    alert("stock name: " + stock1.name);
+
+
+    var stockArray = [];
+
+    stockArray.push(stock1);
+
+    alert(stockArray[0].name);
+  </script>
+
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+<!--
+Javascript:
+
+
+Stocks that the user inputs are saved into an array.
+
+So there is an empty array
+
+var stocksArray[];
+
+And every user input gets pushed into it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total Dividend Calculator:
+
+
+For each stock, enter dividend % and enter total
+
+
+The program calculates: -the total amount of money
+                                       -the percentage each stock takes up in portfolio
+                                       -then adds up for each stock: percentage x dividend
+
+
+Say that we have:
+
+MCDonalds: Dividend 2%  - €5.000
+ADM: Dividend 4%  -  €3.000
+Guangshen: Dividend 3%  -  €2.600
+Postnl: Dividend 11%  -  €1.750
+
+
+Total portfolio is: €12.350
+
+McDonalds: 40.5% of portfolio
+ADM: 24.3% of porfolio
+Guangshen: 21.1% of portfolio
+Postnl: 14.2% of portfolio
+
+Dividend = 0.405 x 2 + 0.243 x 4 + 0.211 x 3 + 0.142 x 11 = 3.98 %
+
+
+-->
